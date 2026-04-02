@@ -1,0 +1,6 @@
+((label flatten (lambda (x)
+                  (cond ((null x) '())
+                        ((atom x) (cons x '()))
+                        ('t (append (flatten (car x))
+                                    (flatten (cdr x)))))))
+ '((a b) (c (d e)) f))

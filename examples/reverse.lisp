@@ -1,0 +1,5 @@
+((label reverse (lambda (x)
+                  (cond ((null x) '())
+                        ('t (append (reverse (cdr x))
+                                    (cons (car x) '()))))))
+ '(a b c d))

@@ -10,5 +10,5 @@ test:
 repl:
     uv run mclispy-repl
 
-eval file="subst.lisp":
+eval file="examples/subst.lisp":
     uv run mclispy-eval {{file}}

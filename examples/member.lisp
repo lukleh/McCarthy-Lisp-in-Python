@@ -1,0 +1,5 @@
+((label member (lambda (x y)
+                 (cond ((null y) '())
+                       ((eq x (car y)) 't)
+                       ('t (member x (cdr y))))))
+ 'c '(a b c d))

@@ -1,4 +1,3 @@
-
 (eval '((label subst (lambda (x1 y1 z1)
                                         (cond ((atom z1)
                                                (cond ((eq z1 y1) x1)
