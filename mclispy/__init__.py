@@ -1,14 +1,14 @@
-
-import os.path
+from importlib.resources import files
 
 from . import lisp
 
 
-core = open(os.path.join(os.path.dirname(__file__), 'core.lisp')).read()
+core = files("mclispy").joinpath("core.lisp").read_text(encoding="utf-8")
 
 
 def load_core():
-    [lisp.leval(exp) for exp in lisp.parse_all(core)]
+    for exp in lisp.parse_all(core):
+        lisp.leval(exp)
 
 
 def interpret(code):

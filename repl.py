@@ -1,6 +1,5 @@
-# -*- coding: utf8 -*-
-
-import mclispy
+from mclispy.cli import repl_main
 
 
-mclispy.repl()
+if __name__ == "__main__":
+    raise SystemExit(repl_main())
