@@ -1,0 +1,6 @@
+(((label compose (lambda (f g)
+                   (lambda (x)
+                     (f (g x)))))
+  (lambda (x) (cons 'left (cons x '())))
+  (lambda (x) (cons 'right (cons x '()))))
+ 'a)

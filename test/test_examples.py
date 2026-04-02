@@ -4,9 +4,11 @@ import mclispy
 
 
 EXAMPLE_RESULTS = {
+    "compose.lisp": "(left (right a))",
     "eq.lisp": "t",
     "firstatom.lisp": "a",
     "flatten.lisp": "(a b c d e f)",
+    "fixpoint-map.lisp": "((seen a) (seen b) (seen c))",
     "member.lisp": "t",
     "reverse.lisp": "(d c b a)",
     "subst.lisp": "(a m (a m c) d)",

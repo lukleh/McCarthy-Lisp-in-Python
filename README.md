@@ -95,6 +95,9 @@ Runnable example programs live in [`examples/`](/home/lukas/projects/McCarthy-Li
 - `examples/reverse.lisp`: reverse a flat symbolic list
 - `examples/member.lisp`: test symbolic membership in a list
 - `examples/flatten.lisp`: flatten a nested symbolic list
+- `examples/compose.lisp`: compose two anonymous functions and apply the result
+- `examples/fixpoint-map.lisp`: a Y-combinator-style example using an
+  applicative-order fixed-point combinator to build `map` without `label`
 
 ## Project notes
 
