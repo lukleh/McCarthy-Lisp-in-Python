@@ -59,6 +59,7 @@ def test_cond():
 
 
 def test_lambda():
+    assert leval(parse("((lambda (x) x) 'a)")) == Atom('a')
     assert leval(parse("((lambda (x) (cons x '(b))) 'a)")) == [Atom('a'), Atom('b')]
     assert leval(parse("""(
                             (lambda (x y) (cons x (cdr y)))
@@ -131,3 +132,9 @@ def test_eval(core):
                                   y)
                                 '((y ((a b) (c d)))))""")) == Atom('a')
 
+
+def test_interpret_uses_fresh_environment():
+    mclispy.interpret("(label keep (lambda (x) x))")
+
+    with pytest.raises(KeyError):
+        mclispy.interpret("(keep 'a)")

@@ -71,7 +71,9 @@ class Atom():
 global_env = {}
 
 
-def leval(x, env=global_env):
+def leval(x, env=None):
+    if env is None:
+        env = global_env
 
     if isinstance(x, Atom):
         # print('ATOM', x, env[x])
@@ -129,7 +131,6 @@ def leval(x, env=global_env):
     elif operator == Atom('lambda'):
         assert len(x) == 3
         assert isinstance(x[1], list)
-        assert isinstance(x[2], list)
         params = x[1]
         body = x[2]
         return Procedure(params, body, env)

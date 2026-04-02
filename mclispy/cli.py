@@ -15,7 +15,7 @@ def eval_main(argv: list[str] | None = None) -> int:
         print(f"file {args.lispfile} does not exist")
         return 1
 
-    print(mclispy.interpret(args.lispfile.read_text(encoding="utf-8")))
+    print(mclispy.lisp.lispstr(mclispy.interpret(args.lispfile.read_text(encoding="utf-8"))))
     return 0
 
 
