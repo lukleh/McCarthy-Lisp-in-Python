@@ -67,13 +67,6 @@ Start the REPL:
 uv run mclispy-repl
 ```
 
-The legacy top-level scripts still work too:
-
-```bash
-uv run python eval.py examples/subst.lisp
-uv run python repl.py
-```
-
 ## justfile
 
 If you use `just`, the common tasks are wrapped for convenience:
